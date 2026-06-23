@@ -51,16 +51,33 @@ const FEEDS: Record<string, FeedDef> = {
   techcrunch: { title: 'TechCrunch', url: 'https://techcrunch.com/feed/', category: 'tech', source: 'techcrunch.com', description: 'Startup & tech industry news' },
   'nasa-news': { title: 'NASA Breaking News', url: 'https://www.nasa.gov/rss/dyn/breaking_news.rss', category: 'space', source: 'nasa.gov', description: 'NASA mission & science news' },
   'esa-news': { title: 'ESA Space News', url: 'https://www.esa.int/rssfeed/Our_Activities/Space_News', category: 'space', source: 'esa.int', description: 'European Space Agency news' },
+  schneier: { title: 'Schneier on Security', url: 'https://www.schneier.com/feed/atom/', category: 'security', source: 'schneier.com', description: 'Bruce Schneier on security & cryptography' },
+  bleepingcomputer: { title: 'BleepingComputer', url: 'https://www.bleepingcomputer.com/feed/', category: 'security', source: 'bleepingcomputer.com', description: 'Security & technology news, breaches, malware' },
+  'who-news': { title: 'WHO News', url: 'https://www.who.int/rss-feeds/news-english.xml', category: 'health', source: 'who.int', description: 'World Health Organization news releases' },
+  'fda-press': { title: 'FDA Press Releases', url: 'https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/press-releases/rss.xml', category: 'government', source: 'fda.gov', description: 'US FDA press releases (drugs, food, devices)' },
+  'ftc-consumer': { title: 'FTC Consumer Protection', url: 'https://www.ftc.gov/feeds/press-release-consumer-protection.xml', category: 'government', source: 'ftc.gov', description: 'US FTC consumer-protection press releases (scams, fraud, refunds)' },
+  'ecb-press': { title: 'ECB Press', url: 'https://www.ecb.europa.eu/rss/press.html', category: 'finance', source: 'ecb.europa.eu', description: 'European Central Bank press releases' },
+  nature: { title: 'Nature', url: 'http://feeds.nature.com/nature/rss/current', category: 'science', source: 'nature.com', description: 'Nature journal — latest research & news' },
+  sciencedaily: { title: 'ScienceDaily', url: 'https://www.sciencedaily.com/rss/all.xml', category: 'science', source: 'sciencedaily.com', description: 'Breaking science news across all fields' },
+  'phys-org': { title: 'Phys.org', url: 'https://phys.org/rss-feed/', category: 'science', source: 'phys.org', description: 'Physics, space, tech & science news' },
+  wired: { title: 'WIRED', url: 'https://www.wired.com/feed/rss', category: 'tech', source: 'wired.com', description: 'Technology, science & culture' },
+  'the-verge': { title: 'The Verge', url: 'https://www.theverge.com/rss/index.xml', category: 'tech', source: 'theverge.com', description: 'Technology, gadgets & culture' },
+  'mit-tech-review': { title: 'MIT Technology Review', url: 'https://www.technologyreview.com/feed/', category: 'tech', source: 'technologyreview.com', description: 'Emerging-technology analysis (AI, biotech, climate)' },
+  engadget: { title: 'Engadget', url: 'https://www.engadget.com/rss.xml', category: 'tech', source: 'engadget.com', description: 'Consumer-tech & gadget news' },
+  'nyt-world': { title: 'New York Times — World', url: 'https://rss.nytimes.com/services/xml/rss/nyt/World.xml', category: 'news', source: 'nytimes.com', description: 'NYT world news' },
+  aljazeera: { title: 'Al Jazeera', url: 'https://www.aljazeera.com/xml/rss/all.xml', category: 'news', source: 'aljazeera.com', description: 'Al Jazeera English — world news' },
+  'dw-news': { title: 'Deutsche Welle', url: 'https://rss.dw.com/rdf/rss-en-all', category: 'news', source: 'dw.com', description: 'Deutsche Welle — German & world news (English)' },
+  propublica: { title: 'ProPublica', url: 'https://www.propublica.org/feeds/propublica/main', category: 'news', source: 'propublica.org', description: 'Investigative journalism' },
 };
 
 const tools: McpToolExport['tools'] = [
   {
     name: 'list_feeds',
-    description: 'List the curated feeds available (id, title, category, source). Optionally filter by category (security, health, finance, news, tech, space) or keyword. Pass an id to read_feed.',
+    description: 'List the curated feeds available (id, title, category, source). Optionally filter by category (security, health, finance, government, science, news, tech, space) or keyword. Pass an id to read_feed.',
     inputSchema: {
       type: 'object',
       properties: {
-        category: { type: 'string', description: 'Filter by category: security, health, finance, news, tech, space.' },
+        category: { type: 'string', description: 'Filter by category: security, health, finance, government, science, news, tech, space.' },
         query: { type: 'string', description: 'Keyword to match in feed title/source/description.' },
       },
     },

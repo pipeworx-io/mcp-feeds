@@ -2,13 +2,13 @@
 
 Live Feeds (RSS/Atom) MCP.
 
-Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 910+ live data sources.
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 912+ live data sources.
 
 ## Tools
 
 | Tool | Description |
 |------|-------------|
-| `list_feeds` | List the curated feeds available (id, title, category, source). Optionally filter by category (security, health, finance, business, government, science, ai, dev, news, tech, space, sports, crypto, climate, entertainment, gaming) or keyword. Pass an id to read_feed. |
+| `list_feeds` | List the curated feeds available (id, title, category, source). Optionally filter by category (security, health, finance, business, government, science, ai, dev, news, tech, space, sports, crypto, climate, entertainment, gaming, automotive, food, design, energy) or keyword. Pass an id to read_feed. |
 | `read_feed` | Read a curated feed by its id (from list_feeds). Returns normalized items (title, link, published, summary). Optionally filter items by keyword. |
 | `fetch_feed` | Fetch and normalize any RSS / Atom / RDF feed by URL. CF-robust: fetches directly and falls back to a proxy if the source blocks the gateway. Use list_feeds first for curated sources. |
 
@@ -26,7 +26,7 @@ Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
 }
 ```
 
-Or connect to the full Pipeworx gateway for access to all 910+ data sources:
+Or connect to the full Pipeworx gateway for access to all 912+ data sources:
 
 ```json
 {

@@ -8,7 +8,7 @@ Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents 
 
 | Tool | Description |
 |------|-------------|
-| `list_feeds` | List the curated feeds available (id, title, category, source). Optionally filter by category (security, health, finance, government, science, news, tech, space, sports, crypto, climate, entertainment, gaming) or keyword. Pass an id to read_feed. |
+| `list_feeds` | List the curated feeds available (id, title, category, source). Optionally filter by category (security, health, finance, business, government, science, ai, dev, news, tech, space, sports, crypto, climate, entertainment, gaming) or keyword. Pass an id to read_feed. |
 | `read_feed` | Read a curated feed by its id (from list_feeds). Returns normalized items (title, link, published, summary). Optionally filter items by keyword. |
 | `fetch_feed` | Fetch and normalize any RSS / Atom / RDF feed by URL. CF-robust: fetches directly and falls back to a proxy if the source blocks the gateway. Use list_feeds first for curated sources. |
 

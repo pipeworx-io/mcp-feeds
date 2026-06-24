@@ -3,7 +3,7 @@
   "name": "io.github.pipeworx-io/feeds",
   "title": "Feeds",
   "description": "Live Feeds (RSS/Atom) MCP.",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "websiteUrl": "https://pipeworx.io/packs/feeds",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-feeds",
